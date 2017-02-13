@@ -201,7 +201,7 @@ class ADS1x15:
                                                  self.__ADS1015_REG_CONFIG_DR_1600SPS)
         else:
             if ((sps not in self.spsADS1115) & self.debug):
-            print("ADS1x15: Invalid pga specified: %d, using 6144mV" % sps)
+                print("ADS1x15: Invalid pga specified: %d, using 6144mV" % sps)
             config |= self.spsADS1115.setdefault(sps,
                                                  self.__ADS1115_REG_CONFIG_DR_250SPS)
 
