@@ -272,9 +272,9 @@ class ADS1x15:
                                                  self.__ADS1015_REG_CONFIG_DR_1600SPS)
         else:
             if ((sps not in self.spsADS1115) & self.debug):
-        print(("ADS1x15: Invalid pga specified: %d, using 6144mV" % sps))
-        config |= self.spsADS1115.setdefault(sps,
-                                             self.__ADS1115_REG_CONFIG_DR_250SPS)
+                print(("ADS1x15: Invalid pga specified: %d, using 6144mV" % sps))
+            config |= self.spsADS1115.setdefault(sps,
+                                                 self.__ADS1115_REG_CONFIG_DR_250SPS)
 
         # Set PGA/voltage range, defaults to +-6.144V
         if ((pga not in self.pgaADS1x15) & self.debug):
@@ -349,8 +349,8 @@ class ADS1x15:
             config |= self.__ADS1015_REG_CONFIG_MUX_DIFF_1_3
         else:
             if (self.debug):
-            print(("ADS1x15: Invalid channels specified: %d, %d" % (chP, chN)))
-            return -1
+                print(("ADS1x15: Invalid channels specified: %d, %d" % (chP, chN)))
+                return -1
 
         # Set sample per seconds, defaults to 250sps
         # If sps is in the dictionary (defined in init()) it returns the
@@ -362,9 +362,9 @@ class ADS1x15:
                                                  self.__ADS1015_REG_CONFIG_DR_1600SPS)
         else:
             if ((sps not in self.spsADS1115) & self.debug):
-        print(("ADS1x15: Invalid pga specified: %d, using 6144mV" % sps))
-        config |= self.spsADS1115.setdefault(sps,
-                                             self.__ADS1115_REG_CONFIG_DR_250SPS)
+                print(("ADS1x15: Invalid pga specified: %d, using 6144mV" % sps))
+            config |= self.spsADS1115.setdefault(sps,
+                                                 self.__ADS1115_REG_CONFIG_DR_250SPS)
 
         # Set PGA/voltage range, defaults to +-6.144V
         if ((pga not in self.pgaADS1x15) & self.debug):
